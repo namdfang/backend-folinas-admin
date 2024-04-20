@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "banner_tops",
+  "info": {
+    "singularName": "banner-top",
+    "pluralName": "banner-tops",
+    "displayName": "Banner Top"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Banner": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
