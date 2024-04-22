@@ -1,10 +1,10 @@
 {
-  "kind": "collectionType",
-  "collectionName": "contact_forms",
+  "kind": "singleType",
+  "collectionName": "talking_numbers",
   "info": {
-    "singularName": "contact-form",
-    "pluralName": "contact-forms",
-    "displayName": "Contact Form"
+    "singularName": "talking-number",
+    "pluralName": "talking-numbers",
+    "displayName": "Talking Number"
   },
   "options": {
     "draftAndPublish": true
@@ -15,25 +15,7 @@
     }
   },
   "attributes": {
-    "Name": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
-    "Email": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "email",
-      "required": true
-    },
-    "Phone": {
+    "Title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -41,14 +23,37 @@
       },
       "type": "string"
     },
-    "Message": {
+    "Years": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "blocks",
-      "required": true
+      "type": "integer"
+    },
+    "Staff": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "Branch": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "Partners": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     }
   }
 }

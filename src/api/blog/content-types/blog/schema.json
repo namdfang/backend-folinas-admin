@@ -4,7 +4,7 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "blog",
+    "displayName": "Blog",
     "description": ""
   },
   "options": {
@@ -16,34 +16,19 @@
     }
   },
   "attributes": {
-    "Content": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "Title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "required": true
     },
-    "Blog": {
-      "type": "richtext",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "image": {
+    "Image": {
       "type": "media",
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -56,23 +41,37 @@
         }
       }
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "News",
-        "Blogs",
-        "Tutorial"
-      ],
+    "Author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Content": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "richtext"
     },
-    "author": {
+    "Collection": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "admin::user"
+      "target": "api::blog-collection.blog-collection"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-tag.blog-tag",
+      "mappedBy": "blog"
+    },
+    "Introduction": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

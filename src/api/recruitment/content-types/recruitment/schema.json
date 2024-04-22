@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recruitments",
+  "info": {
+    "singularName": "recruitment",
+    "pluralName": "recruitments",
+    "displayName": "Recruitment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "StartTime": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "date"
+    },
+    "EndTime": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "date"
+    },
+    "Salary": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "Persons": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "Description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "blocks",
+      "required": true
+    },
+    "Major": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Advertising",
+        "Sofware Energing",
+        "IT Support",
+        "Saler",
+        "BA",
+        "Designer",
+        "Media"
+      ]
+    },
+    "recruitment_forms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recruitment-form.recruitment-form",
+      "mappedBy": "recruitment_id"
+    }
+  }
+}

@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "banner_tops",
+  "collectionName": "about_introductions",
   "info": {
-    "singularName": "banner-top",
-    "pluralName": "banner-tops",
-    "displayName": "Banner Top",
-    "description": ""
+    "singularName": "about-introduction",
+    "pluralName": "about-introductions",
+    "displayName": "About Introduction"
   },
   "options": {
     "draftAndPublish": true
@@ -22,21 +21,29 @@
           "localized": true
         }
       },
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "Image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ],
+    "Content": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "blocks",
+      "required": true
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }

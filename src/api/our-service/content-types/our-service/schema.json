@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "our_stories",
+  "collectionName": "our_services",
   "info": {
-    "singularName": "our-story",
-    "pluralName": "our-stories",
-    "displayName": "Our Story"
+    "singularName": "our-service",
+    "pluralName": "our-services",
+    "displayName": "Our Service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,19 +16,27 @@
     }
   },
   "attributes": {
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false,
+    "Title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "type": "string",
       "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Content": {
       "pluginOptions": {

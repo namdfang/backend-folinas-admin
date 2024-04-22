@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "our_stories",
+  "collectionName": "about_growings",
   "info": {
-    "singularName": "our-story",
-    "pluralName": "our-stories",
-    "displayName": "Our Story"
+    "singularName": "about-growing",
+    "pluralName": "about-growings",
+    "displayName": "About Growing"
   },
   "options": {
     "draftAndPublish": true
@@ -15,27 +15,27 @@
     }
   },
   "attributes": {
-    "Image": {
+    "Title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "Images": {
       "allowedTypes": [
         "images",
         "videos"
       ],
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true
-    },
-    "Content": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "blocks",
       "required": true
     }
   }

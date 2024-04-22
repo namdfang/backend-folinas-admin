@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "our_stories",
+  "collectionName": "menus",
   "info": {
-    "singularName": "our-story",
-    "pluralName": "our-stories",
-    "displayName": "Our Story"
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu"
   },
   "options": {
     "draftAndPublish": true
@@ -15,27 +15,32 @@
     }
   },
   "attributes": {
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false,
+    "Title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "type": "string",
       "required": true
     },
-    "Content": {
+    "Link": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "blocks",
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "about-us",
+        "our-services",
+        "contact",
+        "recruitment",
+        "blog",
+        "shipping-policy",
+        "return-refund"
+      ],
       "required": true
     }
   }

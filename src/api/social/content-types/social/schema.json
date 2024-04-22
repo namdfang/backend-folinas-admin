@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "our_stories",
+  "collectionName": "socials",
   "info": {
-    "singularName": "our-story",
-    "pluralName": "our-stories",
-    "displayName": "Our Story"
+    "singularName": "social",
+    "pluralName": "socials",
+    "displayName": "Social"
   },
   "options": {
     "draftAndPublish": true
@@ -15,28 +15,21 @@
     }
   },
   "attributes": {
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false,
+    "Title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true
+      "type": "string"
     },
-    "Content": {
+    "Link": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "blocks",
-      "required": true
+      "type": "string"
     }
   }
 }
