@@ -1836,18 +1836,18 @@ export interface ApiRecruitmentFormRecruitmentForm
           localized: true;
         };
       }>;
-    CV: Attribute.Media &
+    recruitment_id: Attribute.Relation<
+      'api::recruitment-form.recruitment-form',
+      'manyToOne',
+      'api::recruitment.recruitment'
+    >;
+    LinkCV: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    recruitment_id: Attribute.Relation<
-      'api::recruitment-form.recruitment-form',
-      'manyToOne',
-      'api::recruitment.recruitment'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

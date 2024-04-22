@@ -43,24 +43,21 @@
       "type": "string",
       "required": true
     },
-    "CV": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "files"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "recruitment_id": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::recruitment.recruitment",
       "inversedBy": "recruitment_forms"
+    },
+    "LinkCV": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "regex": "https://"
     }
   }
 }
